@@ -1,14 +1,20 @@
 <!--pages/order/order.wxml-->
 
 <view>
-  <view class="flex-row" style="display: flex;flex-direction: row;">
-    <view class="flex-view-item">1</view>
-    <view class="flex-view-item">2</view>
-    <view class="flex-view-item">3</view>
-  </view>
   <view class="flex-column" style="display:flex;flex-direction: column;">
-    <view class="flex-view-item">c1</view>
-    <view class="flex-view-item">c2</view>
-    <view class="flex-view-item">c3</view>
+    <view class="flex-view-item" style="padding: 10px 10px;">
+      <image class="widget__arrow" style="width:300px;height:205px;" src="/images/img/01.png" mode="aspectFill">
+      </image>
+      <view><text>蒙台梭利国际早教4节早教体验课</text></view>
+      <view style="color: #848484;"><text>三-周日，下午课程，六门课程可选</text></view>
+      <view style='padding:10px 0px 0px 0px'>
+        <text style='color: #F4D5A7;'>￥99.00</text>
+        <text decode="{{true}}" style='text-decoration:line-through; font-size:10px;'>￥720：00|&emsp; </text>
+        <text style='color: white; background: #FBBC5B;'>促销</text>        
+        
+      </view>
+      <button type='default' size='mini' style='color: white; background: #FBBC5B;' bindtap='ordering'>立即预约</button>
+    </view>
   </view>
+
 </view>

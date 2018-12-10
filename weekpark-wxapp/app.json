@@ -1,5 +1,5 @@
 {
-  "pages": [
+  "pages": [    
     "pages/index/index",
     "pages/order/order",
     "pages/logs/logs",
@@ -19,15 +19,21 @@
     "list": [
       {
         "text": "首页",
-        "pagePath": "pages/index/index"        
+        "pagePath": "pages/index/index",
+        "selectedIconPath": "images/icon/index-cd.png",
+        "iconPath": "images/icon/index.png"                
       },
       {
         "text": "约课",
-        "pagePath": "pages/order/order"
+        "pagePath": "pages/order/order",
+        "selectedIconPath": "images/icon/order-cd.png",
+        "iconPath": "images/icon/order.png"      
       },
       {
         "text": "我的",
-        "pagePath": "pages/me/me"
+        "pagePath": "pages/me/me",
+        "selectedIconPath": "images/icon/me-cd.png",
+        "iconPath": "images/icon/me.png"        
       }
     ]
   }
