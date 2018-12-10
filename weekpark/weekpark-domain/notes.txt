@@ -1,0 +1,3 @@
+https://github.com/cloudfavorites/favorites-web/blob/master/app/src/main/java/com/favorites/domain/Entitys.java
+
+https://www.jianshu.com/p/9bd6ce692ab1

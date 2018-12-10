@@ -1,0 +1,49 @@
+<html>
+<head>
+  <script src="/js/aes.js"></script>
+</head>
+<body>
+  
+<script>
+    var key = CryptoJS.enc.Utf8.parse("abcdef0123456789");
+ 
+    var plaintText = 'ABCDEFGH'; // 鏄庢枃
+	
+ 
+    var encryptedData = CryptoJS.AES.encrypt(plaintText, key, {
+        mode: CryptoJS.mode.ECB,
+        padding: CryptoJS.pad.Pkcs7
+    });
+ 
+    console.log("鍔犲瘑鍓嶏細"+plaintText);
+    console.log("鍔犲瘑鍚庯細"+encryptedData);
+ 
+    encryptedData = encryptedData.ciphertext.toString();
+ 
+    var encryptedHexStr = CryptoJS.enc.Hex.parse(encryptedData);
+    var encryptedBase64Str = CryptoJS.enc.Base64.stringify(encryptedHexStr);
+	encryptedBase64Str="lIq32cbMNgkvkkCngVtrSL2KAzpbrOH7p/27/YLm70znpbyudOE6S90KNQpEhLl3rNNZzYkOi19dPi00Dd1igA=="
+ 
+    var decryptedData = CryptoJS.AES.decrypt(encryptedBase64Str, key, {
+        mode: CryptoJS.mode.ECB,
+        padding: CryptoJS.pad.Pkcs7
+    });
+ 
+    var decryptedStr = decryptedData.toString(CryptoJS.enc.Utf8);
+ 
+    console.log("瑙ｅ瘑鍚�:"+decryptedStr);
+ 
+	 var pwd = "PCsUFtgog9/qpqmqXsuCRQ==";
+    //鍔犲瘑鏈嶅姟绔繑鍥炵殑鏁版嵁
+    var decryptedData = CryptoJS.AES.decrypt(pwd, key, {
+        mode: CryptoJS.mode.ECB,
+        padding: CryptoJS.pad.Pkcs7
+    });
+	
+	console.log("瑙ｅ瘑鏈嶅姟绔繑鍥炵殑鏁版嵁:"+decryptedStr);
+	
+
+
+</script>
+</body>
+</html>
