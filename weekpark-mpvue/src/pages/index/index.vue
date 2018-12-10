@@ -1,5 +1,60 @@
 <template>
   <div class="container">
+    <div>
+      <img src="../../../static/images/img/banner.jpg" style="width:375px; height:200px;" alt="">
+    </div>
+
+    <!-- 导航栏 -->
+    <div class="div-nav">
+        <div class="nav">
+          <img class="img" src="../../../static/images/img/zaojiao.jpg" alt="">
+          <div>专业早教</div>
+        </div>
+
+        <div class="nav">
+          <img class="img" src="../../../static/images/img/zaojiao.jpg" alt="">
+          <div>专业早教</div>
+        </div>
+
+        <div class="nav">
+          <img class="img" src="../../../static/images/img/zaojiao.jpg" alt="">
+          <div>专业早教</div>
+        </div>
+
+        <div class="nav">
+          <img class="img" src="../../../static/images/img/zaojiao.jpg" alt="">
+          <div>专业早教</div>
+        </div>
+    </div>
+
+    <!-- 精品课程 -->
+    <div>
+      <div>精品课程</div>
+      <div style="margin-top:10px; ">
+        <div style="display: inline-block; width:50%;">
+          <img style="width:140px; height:100px;" src="../../../static/images/img/01.png" alt="">
+        </div>
+        <div style="display: inline-block;  width:50%; ">
+          <div>周三-周六下午课程</div>
+          <div>4节99元</div>
+          <div>启蒙+感统+音乐+数理(2.5岁+)</div>
+          <div>99元立即预约</div>
+        </div>
+      </div>
+
+      <div style="margin-top:10px; ">
+        <div style="display: inline-block; width:50%;">
+          <img style="width:140px; height:100px;" src="../../../static/images/img/01.png" alt="">
+        </div>
+        <div style="display: inline-block;  width:50%; ">
+          <div>周三-周六下午课程</div>
+          <div>4节99元</div>
+          <div>启蒙+感统+音乐+数理(2.5岁+)</div>
+          <div>99元立即预约</div>
+        </div>
+      </div>
+      
+    </div>
   </div>
 </template>
 
@@ -42,39 +97,20 @@ export default {
 </script>
 
 <style scoped>
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.div-nav {
+  margin: 10px;
+  text-align:center;
+  width: 100%;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.nav {
+   display: inline-block;
+   margin: 18px;
+   font-size: 14px;
 }
 
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 150px;
-}
-
-.form-control {
-  display: block;
-  padding: 0 12px;
-  margin-bottom: 5px;
-  border: 1px solid #ccc;
-}
-
-.counter {
-  display: inline-block;
-  margin: 10px auto;
-  padding: 5px 10px;
-  color: blue;
-  border: 1px solid blue;
+.img {
+  width: 50px;
+  height: 50px;
 }
 </style>
