@@ -21,19 +21,26 @@ export const constantRouterMap = [
     }]
   },
 
+  // 星期巴乐园-约课管理
   {
-    path: '/research',
+    path: '/weekpack',
     component: Layout,
-    redirect: '/research/respage01',
-    name: 'Research',
+    redirect: '/weekpack/ording',
+    name: 'Weekpack',
     alwaysShow: true,
-    meta: { title: '日常研究', icon: 'research' },
+    meta: { title: '星期巴乐园', icon: 'weekpack' },
     children: [
       {
-        path: 'respage01',
-        name: 'respage01',
-        component: () => import('@/views/respage01/index'),
-        meta: { title: '金华教育培训市场准实时数据', icon: 'train' }
+        path: 'ording',
+        name: 'ording',
+        component: () => import('@/views/ording/index'),
+        meta: { title: '约课管理', icon: 'train' }
+      },
+      {
+        path: 'clazz',
+        name: 'clazz',
+        component: () => import('@/views/clazz/index'),
+        meta: { title: '精品课程管理', icon: 'train' }
       }
     ]
   },

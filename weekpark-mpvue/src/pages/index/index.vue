@@ -30,27 +30,29 @@
     <!-- 精品课程 -->
     <div>
       <div>精品课程</div>
-      <div style="margin-top:10px; ">
-        <div style="display: inline-block; width:50%;">
-          <img style="width:140px; height:100px;" src="../../../static/images/img/01.png" alt="">
+      <div>
+        <div class=".div-clazz">
+          <div class="clazz">
+            <img style="width:140px; height:100px;" src="../../../static/images/img/01.png" alt="">
+          </div>
+          <div class="clazz">
+            <div>周三-周六下午课程</div>
+            <div>4节99元</div>
+            <div>启蒙+感统+音乐+数理(2.5岁+)</div>
+            <div>99元立即预约</div>
+          </div>
         </div>
-        <div style="display: inline-block;  width:50%; ">
-          <div>周三-周六下午课程</div>
-          <div>4节99元</div>
-          <div>启蒙+感统+音乐+数理(2.5岁+)</div>
-          <div>99元立即预约</div>
-        </div>
-      </div>
 
-      <div style="margin-top:10px; ">
-        <div style="display: inline-block; width:50%;">
-          <img style="width:140px; height:100px;" src="../../../static/images/img/01.png" alt="">
-        </div>
-        <div style="display: inline-block;  width:50%; ">
-          <div>周三-周六下午课程</div>
-          <div>4节99元</div>
-          <div>启蒙+感统+音乐+数理(2.5岁+)</div>
-          <div>99元立即预约</div>
+        <div class=".div-clazz">
+          <div class="clazz">
+            <img style="width:140px; height:100px;" src="../../../static/images/img/01.png" alt="">
+          </div>
+          <div class="clazz">
+            <div>周三-周六下午课程</div>
+            <div>4节99元</div>
+            <div>启蒙+感统+音乐+数理(2.5岁+)</div>
+            <i-button type="primary" @click="bindViewTap">99元立即预约</i-button>
+          </div>
         </div>
       </div>
       
@@ -69,7 +71,7 @@ export default {
 
   methods: {
     bindViewTap () {
-      const url = '../logs/main'
+      const url = '../order/main'
       wx.navigateTo({ url })
     },
     getUserInfo () {
@@ -108,6 +110,17 @@ export default {
    margin: 18px;
    font-size: 14px;
 }
+
+.div-clazz {
+  margin-top: 10px;
+}
+
+.clazz{
+  float: left;
+  width: 49%;
+  border:0px solid #F00;
+  
+} 
 
 .img {
   width: 50px;
