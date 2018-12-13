@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <div v-for="(item, index) in clazz" :key="index">
-      <i-card style="margin-top:0px;">
+    <div v-for="(item, index) in clazz" :key="index" style="margin-top: 40px;">
+      <i-card>
           <view slot="content"><img :src="item.img" alt=""></view>
           <view slot="content">{{item.title}}</view>
           <view slot="content" class=".sub-title">{{item.desc}}</view>
@@ -48,7 +48,6 @@ export default {
   methods: {
     ording (id) {
       console.log('是的，进来了', id)
-      // this.$router.push({path: './detail', query: {id: id}})
       wx.navigateTo({
         url: '../orderDetail/main?id=' + id
       })
