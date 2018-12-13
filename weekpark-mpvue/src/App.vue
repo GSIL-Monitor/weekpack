@@ -21,14 +21,15 @@ export default {
     // })
 
     qcloud.setLoginUrl(host + '/weapp/login')
-    qcloud.login({
-      success: function (userInfo) {
-        console.log('登陆成功', userInfo)
-      },
-      fail: function (err) {
-        console.log('登陆失败', err)
-      }
-    })
+
+    // qcloud.login({
+    //   success: function (userInfo) {
+    //     console.log('登陆成功', userInfo)
+    //   },
+    //   fail: function (err) {
+    //     console.log('登陆失败', err)
+    //   }
+    // })
   }
 }
 </script>
