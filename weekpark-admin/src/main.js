@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import MpvueRouterPatch from 'mpvue-router-patch'
 
 import 'normalize.css/normalize.css' // A modern alternative to CSS resets
 
@@ -18,6 +19,7 @@ import '@/icons' // icon
 import '@/permission' // permission control
 
 Vue.use(ElementUI, { locale })
+Vue.use(MpvueRouterPatch)
 
 Vue.config.productionTip = false
 
