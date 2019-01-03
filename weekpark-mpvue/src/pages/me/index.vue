@@ -1,15 +1,67 @@
 <template>
   <div class="container">
-    <div>{{name}}</div>
+    <!-- <div
+      class="userinfo"
+      @click='login'
+    > -->
+    <button
+      open-type="getUserInfo"
+      lang="zh_CN"
+      @getuserinfo="login"
+    >获取用户信息</button>
+
+    <img
+      :src="userinfo.avatarUrl"
+      alt=""
+    >
+    <p>{{userinfo.nickName}}</p>
   </div>
 </template>
 
 <script>
-
+import qcloud from 'wafer2-client-sdk'
+import config from '@/utils/config'
+import { showSuccess, showModal } from '@/utils/util'
 export default {
   data () {
     return {
-      name: '我'
+      userinfo: {
+        avatarUrl: '../../../static/images/icon/unlogin.png',
+        nickName: '点击登录'
+      }
+    }
+  },
+  methods: {
+    login () {
+      let user = wx.getStorageSync('userinfo')
+      console.log('user', user)
+      const self = this
+      if (!user) {
+        qcloud.setLoginUrl(config.loginUrl)
+        console.log(config.loginUrl)
+        qcloud.login({
+          success: function (userinfo) {
+            console.log('userinfo', userinfo)
+            qcloud.request({
+              url: config.userUrl,
+              login: true,
+              success (userRes) {
+                showSuccess('登录成功')
+                wx.setStorageSync('userinfo', userRes.data.data)
+                self.userinfo = userRes.data.data
+              },
+              fail: err => {
+                console.error(err)
+                showModal('登录错误', err.message)
+              }
+            })
+          },
+          fail: err => {
+            console.error(err)
+            showModal('获取用户信息错误', err.message)
+          }
+        })
+      }
     }
   },
 

@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/me/main",
     "pages/index/main",
     "pages/order/main",
-    "pages/me/main",
-    "pages/orderDetail/main"   
+    "pages/orderDetail/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
