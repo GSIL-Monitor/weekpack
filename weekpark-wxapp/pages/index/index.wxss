@@ -1,21 +1,41 @@
-/**index.wxss**/
-.userinfo {
+.nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30rpx 0;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.nav navigator {
+  /* 为了绝对定位  */
+  position: relative;
+  /* 留出圆形图标的位置 */
+  padding-top: 120rpx;
+  /* 设定基础宽度 */
+  flex-basis:140rpx;
+  /* 触发换行位置（小程序会自动换算，不必考虑适配）  */
+  margin: 15rpx;
+  text-align: center;
+  font-size: 24rpx;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+/* 创建图标  */
+.nav navigator:before{ 
+ content:"\20"; 
+ position:absolute; 
+ top:0; 
+ left:50%; 
+ margin-left:-55rpx; 
+ width:110rpx; 
+ height:110rpx; 
+ border-radius:50%; 
+ background:#bbc1cd; 
 }
 
-.usermotto {
-  margin-top: 200px;
+/* 设定不同图标。注意链接地址是绝对地址，因为小程序不支持相对地址的背景图。只支持image相对地址。  */
+.nav navigator:nth-child(1):before{ 
+ background:#fc6e51 url(../../images/img/zaojiao.jpg) no-repeat center center; 
+}
+.nav navigator:nth-child(1):before{ 
+ background:#fc6e51 url(../../images/img/zaojiao.jpg) no-repeat center center; 
 }

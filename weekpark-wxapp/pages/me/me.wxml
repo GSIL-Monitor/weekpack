@@ -1,2 +1,30 @@
-<!--pages/me/me.wxml-->
-<text>pages/me/me.wxml</text>
+<!--index.wxml-->
+<view class="">
+
+ <!-- 个人信息 -->
+ <view class="userinfo">
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登陆 </button>
+  <block wx:else>
+   <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+   <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </block>
+ </view>
+
+</view>
+
+<!-- 功能列表 -->
+<view class="fun-list">
+ <navigator url="component-pages/wx-navigator/wx-navigator" class="widget">
+  <image mode="aspectFit" style="width: 32px; height: 32px;" src='../../images/icon/orded-w.png'></image>
+  <text class="widget_text">已预订课程</text>
+  <image class="widget__arrow" src="../../images/icon/arrow.png" background-size="cover" />
+ </navigator>
+ <navigator url="../share/share" open-type="redirect" class="widget">
+  <image class="widget_img" mode="aspectFit" src='../../images/icon/share-w.png'></image>
+  <text class="widget_text">分享小程序</text>
+  <image class="widget__arrow" src="../../images/icon/arrow.png" background-size="cover" />
+ </navigator>
+ </view>
+ <view>
+  <button open-type='share'>分享</button>
+ </view>

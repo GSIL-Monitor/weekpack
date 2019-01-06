@@ -4,10 +4,13 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    banner: '../../images/img/banner.jpg',
+    naviList: [
+      {'title': '高端托育', 'url': '../../images/img/zaojiao.jpg'},
+      { 'title': '精品早教', 'url': '../../images/img/zaojiao.jpg'},
+      { 'title': '亲子活动', 'url': '../../images/img/zaojiao.jpg'},
+      { 'title': '专业师资', 'url': '../../images/img/zaojiao.jpg'}
+    ]
   },
   //事件处理函数
   bindViewTap: function() {

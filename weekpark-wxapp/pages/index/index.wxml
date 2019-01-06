@@ -1,13 +1,17 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<view class="">
+  <!-- banner -->
+  <view>
+    <image style="width:100%;" mode="aspectFit" src="{{banner}}"></image>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+
+  <!-- navicate https://www.jb51.net/article/112257.htm-->
+  <view class="nav">
+    <view wx:for="{{naviList}}" wx:key="idx" wx:for-item="itm">
+      <!-- <image src="{{itm.url}}" mode='aspectFit' style='width:30px; height:30px;'></image>
+      <text style='font-size:16px;'>{{itm.title}}</text> -->
+      <navigator url="http://xwbline.com/">{{itm.title}}</navigator> 
+    </view>
   </view>
+
 </view>
