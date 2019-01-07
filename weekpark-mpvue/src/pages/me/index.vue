@@ -42,19 +42,20 @@ export default {
         qcloud.login({
           success: function (userinfo) {
             console.log('userinfo', userinfo)
-            qcloud.request({
-              url: config.userUrl,
-              login: true,
-              success (userRes) {
-                showSuccess('登录成功')
-                wx.setStorageSync('userinfo', userRes.data.data)
-                self.userinfo = userRes.data.data
-              },
-              fail: err => {
-                console.error(err)
-                showModal('登录错误', err.message)
-              }
-            })
+            self.userinfo = userinfo
+            // qcloud.request({
+            //   url: config.userUrl,
+            //   login: true,
+            //   success (userRes) {
+            //     showSuccess('登录成功')
+            //     wx.setStorageSync('userinfo', userRes.data.data)
+            //     self.userinfo = userRes.data.data
+            //   },
+            //   fail: err => {
+            //     console.error(err)
+            //     showModal('登录错误', err.message)
+            //   }
+            // })
           },
           fail: err => {
             console.error(err)
@@ -62,7 +63,30 @@ export default {
           }
         })
       }
+    },
+
+    doLogin () {
+      cosnt session = qcloud.Session.get()
+      console.log('session', session)
+      qcloud.setLoginUrl(config.loginUrl)
+      if(session){
+        qcloud.loginWithCode({
+          success: res => {
+            showSuccess('登陆成功')
+          }
+        })
+      }else{
+        qcloud.login({
+          success: res => {
+            showSuccess('登陆成功')
+            console.log(res)
+          },fail: err => {
+            showModal('登陆失败', err.message)
+          }
+        })
+      }
     }
+
   },
 
   created () {

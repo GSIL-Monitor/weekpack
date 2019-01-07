@@ -7,9 +7,10 @@
 		"minified": true,
 		"newFeature": true
 	},
-	"miniprogramRoot": "dist/wx/",
+	"miniprogramRoot": "./dist/wx/",
+	"qcloudRoot": "./server",
 	"compileType": "miniprogram",
-	"appid": "touristappid",
+	"appid": "wx66c33fd6ce1c5fcb",
 	"projectname": "weekpark-ording",
 	"condition": {
 		"search": {

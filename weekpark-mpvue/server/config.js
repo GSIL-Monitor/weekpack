@@ -5,9 +5,9 @@ const CONF = {
   tunnelServerUrl: '',
   tunnelSignatureKey: '27fb7d1c161b7ca52d73cce0f1d833f9f5b5ec89',
     // 腾讯云相关配置可以查看云 API 密钥控制台：https://console.cloud.tencent.com/capi
-  qcloudAppId: '',
-  qcloudSecretId: '',
-  qcloudSecretKey: '',
+  qcloudAppId: '1254600766',
+  qcloudSecretId: 'AKIDoW3UnuU02tb7gjET41rX4UluthK1I5LP',
+  qcloudSecretKey: '0hOhvysa8UfSAh6LRL3raCg43xfCXgfS',
   wxMessageToken: 'weixinmsgtoken',
   networkTimeout: 30000,
 
@@ -32,8 +32,8 @@ const CONF = {
         host: 'localhost',
         port: 3306,
         user: 'root',
-        db: 'cAuth',
-        pass: '',
+        db: 'weekpark',
+        pass: 'root',
         char: 'utf8mb4'
     },
 
@@ -42,9 +42,9 @@ const CONF = {
          * 地区简称
          * @查看 https://cloud.tencent.com/document/product/436/6224
          */
-        region: 'ap-guangzhou',
+        region: 'ap-chengdu',
         // Bucket 名称
-        fileBucket: 'qcloudtest',
+        fileBucket: 'yueting-1254600766',
         // 文件夹
         uploadFolder: ''
     },
