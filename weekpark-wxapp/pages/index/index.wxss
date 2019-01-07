@@ -33,9 +33,16 @@
 }
 
 /* 设定不同图标。注意链接地址是绝对地址，因为小程序不支持相对地址的背景图。只支持image相对地址。  */
+/* 橙色：#F1B848 蓝色：#649CF1 酒红：#ED5665 淡蓝：#49C1E4 绿色：#9ED465 */
 .nav navigator:nth-child(1):before{ 
  background:#fc6e51 url(../../images/img/zaojiao.jpg) no-repeat center center; 
 }
-.nav navigator:nth-child(1):before{ 
- background:#fc6e51 url(../../images/img/zaojiao.jpg) no-repeat center center; 
+.nav navigator:nth-child(2):before{ 
+ background:#48cfad url(../../images/img/zaojiao.jpg) no-repeat center center; 
+}
+.nav navigator:nth-child(3):before{ 
+ background:#F1B848 url(../../images/img/zaojiao.jpg) no-repeat center center; 
+}
+.nav navigator:nth-child(3):before{ 
+ background:#649CF1 url(../../images/img/zaojiao.jpg) no-repeat center center; 
 }

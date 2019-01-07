@@ -1,3 +1,2 @@
 <!--pages/share/share.wxml-->
-<text>pages/share/share.wxml</text>
 <button type="default" bindtap="share">分享图片</button>
